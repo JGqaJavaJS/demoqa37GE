@@ -1,6 +1,7 @@
 package tests;
 
 import config.ApplicationManager;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.Browser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,6 +16,8 @@ import java.util.Arrays;
 
 public class BaseTest {
 
+    static WebDriver driver;
+
     static ApplicationManager app =
             new ApplicationManager(System
                     .getProperty("browser", Browser.CHROME.browserName()));
@@ -24,7 +27,7 @@ public class BaseTest {
     @BeforeSuite
     public static void startBrowser() {
         logger.info("run browser settings ");
-        app.init();
+        driver = app.init();
     }
     @AfterSuite
     public static void tearDown() {

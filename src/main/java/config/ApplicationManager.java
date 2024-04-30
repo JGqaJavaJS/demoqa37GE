@@ -18,15 +18,12 @@ public class ApplicationManager {
 
     static WebDriver driver;
     String browser;
-    AlertsPage alertsPage;
-    HomePage homePage;
-    LeftSideMenu leftSideMenu;
 
     public ApplicationManager(String browser) {
         this.browser = browser;
     }
 
-    public void init() {
+    public WebDriver init() {
         if(browser.equals("chrome")) {
             // with tools:
             //driver = new ChromeDriver();
@@ -55,22 +52,7 @@ public class ApplicationManager {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
         driver.navigate().to("https://demoqa.com/");
-
-        alertsPage = new AlertsPage(driver);
-        homePage = new HomePage(driver);
-        leftSideMenu = new LeftSideMenu(driver);
-    }
-
-    public AlertsPage getAlertsPage() {
-        return alertsPage;
-    }
-
-    public HomePage getHomePage() {
-        return homePage;
-    }
-
-    public LeftSideMenu getLeftSideMenu() {
-        return leftSideMenu;
+        return driver;
     }
 
     public void quit() {
