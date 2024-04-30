@@ -5,6 +5,10 @@ import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class AlertsPage extends BasePage {
     public AlertsPage(WebDriver driver) {
@@ -13,6 +17,12 @@ public class AlertsPage extends BasePage {
 
     @FindBy(xpath = "//button[@id='timerAlertButton']")
     WebElement btnAlert5Sec;
+
+    @FindBy(xpath = "//span[@id='promptResult']")
+    WebElement textFromPrompt;
+
+    @FindBy(xpath = "//button[@id='promtButton']")
+    WebElement btnOpenPromptAlert;
 
     private Alert getAlert() {
         return driver.switchTo().alert();
@@ -28,7 +38,7 @@ public class AlertsPage extends BasePage {
         return this;
     }
 
-    private void typeAlert(String text, Alert alert) {
+    private void typeInAlertPrompt(String text, Alert alert) {
         alert.sendKeys(text);
     }
 
@@ -45,6 +55,12 @@ public class AlertsPage extends BasePage {
         return this;
     }
 
+    private void waitForAlertPresent(int time) {
+        new WebDriverWait(driver, Duration.ofSeconds(time))
+                .until(ExpectedConditions.alertIsPresent());
+    }
+
+
     public boolean verifyAlert5SecsOpen() {
         clickWithJSScroll(btnAlert5Sec, 0, 300);
         pause(5200);
@@ -53,5 +69,15 @@ public class AlertsPage extends BasePage {
         String actualRes = getMessageAlert(alert);
         clickAccept(alert);
         return expectedRes.equals(actualRes);
+    }
+
+    public boolean verifyTextFromPromptDisplaysCorrect(String text) {
+        clickWithJSScroll(btnOpenPromptAlert, 0, 500);
+        waitForAlertPresent(2);
+        Alert alert = getAlert();
+        typeInAlertPrompt(text, alert);
+        clickAccept(alert);
+        String actualRes = getTextBase(textFromPrompt);
+        return actualRes.contains(text);
     }
 }

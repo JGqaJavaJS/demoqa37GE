@@ -23,9 +23,13 @@ public class AlertsTests extends BaseTest{
         new AlertsPage(driver).closeAlertIfPresent();
     }
 
-
     @Test
     public void fiveSecondsWaitAlertOpen() {
         Assert.assertTrue(new AlertsPage(driver).verifyAlert5SecsOpen());
+    }
+
+    @Test
+    public void promptAlertTextTest() {
+        Assert.assertTrue(new AlertsPage(driver).verifyTextFromPromptDisplaysCorrect("jdsfhkj"));
     }
 }
