@@ -57,7 +57,7 @@
       <recent name="config" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.AlertsTests.promptAlertTextTest">
+  <component name="RunManager" selected="TestNG.AlertsTests">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="demoqa37GE" />
@@ -67,6 +67,23 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AlertsTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="demoqa37GE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.AlertsTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -109,6 +126,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.AlertsTests" />
         <item itemvalue="TestNG.AlertsTests.promptAlertTextTest" />
         <item itemvalue="TestNG.AlertsTests.fiveSecondsWaitAlertOpen" />
         <item itemvalue="Application.Main" />

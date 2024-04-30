@@ -1,6 +1,7 @@
 package tests;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -21,6 +22,11 @@ public class AlertsTests extends BaseTest{
     @AfterMethod
     public void postConditionAfterMethod() {
         new AlertsPage(driver).closeAlertIfPresent();
+    }
+
+    @AfterClass
+    public void afterClassPostConditions() {
+        new HomePage(driver).navigateToHomePage();
     }
 
     @Test
