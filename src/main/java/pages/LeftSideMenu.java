@@ -15,6 +15,9 @@ public class LeftSideMenu extends BasePage{
     @FindBy(xpath ="//span[contains(text(),'Browser Windows')]")
     WebElement btnOpenWindowsPage;
 
+    @FindBy(xpath ="//span[contains(text(),'Select Menu')]")
+    WebElement btnSelectMenu;
+
     public AlertsPage clickOnAlerts() {
         clickBase(btnAlerts);
         return new AlertsPage(driver);
@@ -23,5 +26,10 @@ public class LeftSideMenu extends BasePage{
     public BrowserWindowsPage clickOnWindows() {
         clickWithJSScroll(btnOpenWindowsPage, 0, 200);
         return new BrowserWindowsPage(driver);
+    }
+
+    public SelectMenuPage clickOnSelectMenu() {
+        clickWithJSScroll(btnSelectMenu, 0, 500);
+        return new SelectMenuPage(driver);
     }
 }

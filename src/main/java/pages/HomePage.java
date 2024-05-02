@@ -12,6 +12,9 @@ public class HomePage extends BasePage{
     @FindBy(xpath="//div[@class='card-body']//h5[contains(text(),'Alerts')]")
     WebElement btnAlertsFrames;
 
+    @FindBy(xpath="//div[@class='card-body']//h5[contains(text(),'Widgets')]")
+    WebElement btnWidgets;
+
     public AlertsWindowsPage clickOnAlertsFrames() {
         clickWithJSScroll(btnAlertsFrames, 0, 300);
         return new AlertsWindowsPage(driver);
@@ -20,5 +23,10 @@ public class HomePage extends BasePage{
     public HomePage navigateToHomePage() {
         driver.navigate().to("https://demoqa.com/");
         return  this;
+    }
+
+    public WidgetsPage clickOnWidgets() {
+        clickWithJSScroll(btnWidgets, 0, 300);
+        return new WidgetsPage(driver);
     }
 }
