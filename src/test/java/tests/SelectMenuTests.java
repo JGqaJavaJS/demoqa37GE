@@ -17,14 +17,12 @@ public class SelectMenuTests extends BaseTest{
     @Test
     public void fillFormTest() {
         new SelectMenuPage(driver)
-//                .fillSelectValue("Group 1, option 1")
                 .fillSelectOne("Mr.")
                 .fillOldStyleSelectMenu("Red")
                 .fillMultiSelect(new String[]{"Green", "Black"})
                 .fillStandartMultiSelect(new String[]{"Volvo", "Opel"});
 
 //        SelectMenuPage selectMenuPage = new SelectMenuPage(driver);
-//        softAssert.assertTrue(selectMenuPage.verifySelectValue("Group 1, option 1"));
 //        softAssert.assertTrue(selectMenuPage.verifySlectOne("Mr."));
 //        softAssert.assertTrue(selectMenuPage.verifyOldStyleSelectMenu("Red"));
 //        softAssert.assertTrue(selectMenuPage.verifyDropDownSelect("Green"));
