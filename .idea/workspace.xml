@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a0d20b5-cf5f-4b85-9fd4-57e498ffc802" name="Changes" comment="select multiple standard">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/DroppablePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/InteractionPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/DroppableTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/LeftSideMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/LeftSideMenu.java" afterDir="false" />
+    <list default="true" id="2a0d20b5-cf5f-4b85-9fd4-57e498ffc802" name="Changes" comment="drag and drop">
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/DroppablePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/DroppablePage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -248,7 +242,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714646630525</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="drag and drop">
+      <option name="closed" value="true" />
+      <created>1714648181779</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1714648181779</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -272,6 +274,7 @@
     <MESSAGE value="windows handles" />
     <MESSAGE value="select" />
     <MESSAGE value="select multiple standard" />
-    <option name="LAST_COMMIT_MESSAGE" value="select multiple standard" />
+    <MESSAGE value="drag and drop" />
+    <option name="LAST_COMMIT_MESSAGE" value="drag and drop" />
   </component>
 </project>

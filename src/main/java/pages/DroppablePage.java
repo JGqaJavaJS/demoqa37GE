@@ -18,8 +18,8 @@ public class DroppablePage extends BasePage{
 
     public DroppablePage actionsDragMe() {
         Actions actions = new Actions(driver);
-        jsScroll(elementDrop, 0, 450);
-        actions.dragAndDrop(elementDrop, elementToDrag);
+        jsScroll(elementDrop, 0, 550);
+        actions.dragAndDrop(elementDrop, elementToDrag).perform();
         pause(10000);
         return this;
     }
