@@ -46,4 +46,14 @@ public abstract class BasePage {
             throw new RuntimeException(e);
         }
     }
+
+    protected boolean isStringsEqual(String actualRes, String expectedRes) {
+        if(actualRes.equals(expectedRes)) {
+            return true;
+        } else {
+            System.out.println("actual res: " + actualRes +
+                    " expected res " + expectedRes);
+            return false;
+        }
+    }
 }
