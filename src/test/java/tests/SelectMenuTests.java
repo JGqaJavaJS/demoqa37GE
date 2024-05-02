@@ -20,8 +20,8 @@ public class SelectMenuTests extends BaseTest{
 //                .fillSelectValue("Group 1, option 1")
        //         .fillSelectOne("Mr.")
                 .fillOldStyleSelectMenu("Red")
-                .fillMultiSelect(new String[]{"Green", "Black"});
-//                .fillStandartMultiSelect("Volvo");
+                .fillMultiSelect(new String[]{"Green", "Black"})
+                .fillStandartMultiSelect(new String[]{"Volvo", "Opel"});
 
 //        SelectMenuPage selectMenuPage = new SelectMenuPage(driver);
 //        softAssert.assertTrue(selectMenuPage.verifySelectValue("Group 1, option 1"));

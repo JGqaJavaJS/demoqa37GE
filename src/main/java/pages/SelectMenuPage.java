@@ -3,9 +3,11 @@ package pages;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
+import java.security.Key;
 import java.util.List;
 
 public class SelectMenuPage extends BasePage{
@@ -27,6 +29,9 @@ public class SelectMenuPage extends BasePage{
 
     @FindBy(className = "text-center")
     WebElement pageTitle;
+
+    @FindBy(id = "cars")
+    WebElement multiSelectForm;
 
     public SelectMenuPage fillSelectValue(String str) {
         clickWithJSScroll(fieldSelectMenu, 0, 400);
@@ -62,4 +67,25 @@ public class SelectMenuPage extends BasePage{
         pause(5000);
         return this;
     }
+
+    public SelectMenuPage fillStandartMultiSelect(String[] strings) {
+        Select select = new Select(multiSelectForm);
+        List<WebElement> options = select.getOptions();
+
+        Keys key = getKeyForOSCommandOrControl();
+        Actions actions = new Actions(driver);
+        actions.sendKeys(key).perform();
+
+        for(String str : strings) {
+            for(WebElement element: options) {
+                if(getTextBase(element).equals(str)) {
+                    clickBase(element);
+                    break;
+                }
+            }
+        }
+
+        return this;
+    }
+
 }

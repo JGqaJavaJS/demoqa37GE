@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -56,4 +57,16 @@ public abstract class BasePage {
             return false;
         }
     }
+
+    protected Keys getKeyForOSCommandOrControl() {
+        String os = System.getProperty("os.name");
+        System.out.println("my os: " + os);
+        if(os.startsWith("Mac")) {
+            return Keys.COMMAND;
+        } else if(os.startsWith("Win")) {
+            return Keys.CONTROL;
+        }
+        return Keys.CONTROL;
+    }
+
 }
