@@ -18,6 +18,9 @@ public class LeftSideMenu extends BasePage{
     @FindBy(xpath ="//span[contains(text(),'Select Menu')]")
     WebElement btnSelectMenu;
 
+    @FindBy(xpath = "//span[.='Droppable']")
+    WebElement droppable;
+
     public AlertsPage clickOnAlerts() {
         clickBase(btnAlerts);
         return new AlertsPage(driver);
@@ -31,5 +34,10 @@ public class LeftSideMenu extends BasePage{
     public SelectMenuPage clickOnSelectMenu() {
         clickWithJSScroll(btnSelectMenu, 0, 500);
         return new SelectMenuPage(driver);
+    }
+
+    public DroppablePage clickOnDroppable() {
+        clickWithJSScroll(droppable, 0, 450);
+        return new DroppablePage(driver);
     }
 }

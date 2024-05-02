@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a0d20b5-cf5f-4b85-9fd4-57e498ffc802" name="Changes" comment="select">
+    <list default="true" id="2a0d20b5-cf5f-4b85-9fd4-57e498ffc802" name="Changes" comment="select multiple standard">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/DroppablePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/InteractionPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/DroppableTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/SelectMenuPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/SelectMenuPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/SelectMenuTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/SelectMenuTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/LeftSideMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/LeftSideMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +50,7 @@
     "TestNG.AlertsTests.fiveSecondsWaitAlertOpen.executor": "Run",
     "TestNG.AlertsTests.promptAlertTextTest.executor": "Run",
     "TestNG.BrowserWindowsTests.isNewHandlerOpen.executor": "Run",
+    "TestNG.DroppableTests.dragAndDropActions.executor": "Run",
     "TestNG.SelectMenuTests.fillFormTest.executor": "Run",
     "TestNG.tests.executor": "Run",
     "git-widget-placeholder": "main",
@@ -62,7 +66,7 @@
       <recent name="config" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.SelectMenuTests.fillFormTest">
+  <component name="RunManager" selected="TestNG.DroppableTests.dragAndDropActions">
     <configuration name="BasePage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pages.BasePage" />
       <module name="demoqa37GE" />
@@ -72,23 +76,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AlertsTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="demoqa37GE" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.AlertsTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -104,6 +91,24 @@
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.BrowserWindowsTests" />
       <option name="METHOD_NAME" value="isNewHandlerOpen" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DroppableTests.dragAndDropActions" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="demoqa37GE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.DroppableTests" />
+      <option name="METHOD_NAME" value="dragAndDropActions" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -147,11 +152,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.DroppableTests.dragAndDropActions" />
         <item itemvalue="TestNG.SelectMenuTests.fillFormTest" />
         <item itemvalue="Application.BasePage" />
         <item itemvalue="TestNG.BrowserWindowsTests.isNewHandlerOpen" />
         <item itemvalue="TestNG.tests" />
-        <item itemvalue="TestNG.AlertsTests" />
       </list>
     </recent_temporary>
   </component>
@@ -235,7 +240,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714643809181</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="select multiple standard">
+      <option name="closed" value="true" />
+      <created>1714646630525</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1714646630525</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -258,6 +271,7 @@
     <MESSAGE value="start test handlers" />
     <MESSAGE value="windows handles" />
     <MESSAGE value="select" />
-    <option name="LAST_COMMIT_MESSAGE" value="select" />
+    <MESSAGE value="select multiple standard" />
+    <option name="LAST_COMMIT_MESSAGE" value="select multiple standard" />
   </component>
 </project>

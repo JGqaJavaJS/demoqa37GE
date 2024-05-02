@@ -26,8 +26,12 @@ public abstract class BasePage {
     }
 
     public void clickWithJSScroll(WebElement element, int x, int y) {
-        js.executeScript("window.scrollBy(" + x + "," + y + ")");
+        jsScroll(element, x, y);
         clickBase(element);
+    }
+
+    protected void jsScroll(WebElement element, int x, int y) {
+        js.executeScript("window.scrollBy(" + x + "," + y + ")");
     }
 
     public void typeText(WebElement element, String text) {
