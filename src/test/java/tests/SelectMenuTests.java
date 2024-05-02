@@ -18,7 +18,7 @@ public class SelectMenuTests extends BaseTest{
     public void fillFormTest() {
         new SelectMenuPage(driver)
 //                .fillSelectValue("Group 1, option 1")
-       //         .fillSelectOne("Mr.")
+                .fillSelectOne("Mr.")
                 .fillOldStyleSelectMenu("Red")
                 .fillMultiSelect(new String[]{"Green", "Black"})
                 .fillStandartMultiSelect(new String[]{"Volvo", "Opel"});

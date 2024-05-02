@@ -33,6 +33,12 @@ public class SelectMenuPage extends BasePage{
     @FindBy(id = "cars")
     WebElement multiSelectForm;
 
+    @FindBy(xpath = "//div[contains(@id,'react-select')]")
+    List<WebElement> allDataInSelectOne;
+
+    @FindBy(xpath = "//div[@id='selectOne']//div[contains(@class,'placeholder')]")
+    WebElement inputSelectOne;
+
     public SelectMenuPage fillSelectValue(String str) {
         clickWithJSScroll(fieldSelectMenu, 0, 400);
         //some function to click on text
@@ -40,7 +46,15 @@ public class SelectMenuPage extends BasePage{
     }
 
     public SelectMenuPage fillSelectOne(String str) {
-
+        jsScroll(inputSelectOne,0,400);
+        clickBase(inputSelectOne);
+        for(WebElement el : allDataInSelectOne) {
+            if(getTextBase(el).equals(str)) {
+                clickWithJSScroll(el, 0, 150);
+                break;
+            }
+        }
+        pause(5000);
         return this;
     }
 
