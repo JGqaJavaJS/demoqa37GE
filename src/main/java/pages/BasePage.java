@@ -73,6 +73,10 @@ public abstract class BasePage {
         return Keys.CONTROL;
     }
 
+    protected String getAttributeBase(WebElement el, String attributeName) {
+        return el.getAttribute(attributeName);
+    }
+
     public void hideIFrames() {
         hideFooter();
         hideBanner();

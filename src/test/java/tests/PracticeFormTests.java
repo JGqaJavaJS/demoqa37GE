@@ -23,7 +23,7 @@ public class PracticeFormTests extends BaseTest{
                 .enterBirthDay("16 Aug 1987")
                 .enterSubjects(new String[]{"Maths","Chemistry"})
                 .selectHobby(new String[]{"Sports","Reading"})
-                .uploadFile()
+                .uploadFile("/Users/julia/Tools/1.png")
                 .selectState("NCR")
                 .selectCity("Delhi")
                 .clickOnSubmit()

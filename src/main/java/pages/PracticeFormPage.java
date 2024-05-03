@@ -24,9 +24,36 @@ public class PracticeFormPage extends BasePage{
     @FindBy(id = "userNumber")
     WebElement inputPhone;
 
-    @FindBy(xpath = "//*[contains(@id,'gender-radio')]")
-    List<WebElement> allGendersRadio;
+    @FindBy(id = "dateOfBirthInput")
+    WebElement inputDateOfBirth;
 
+    @FindBy(id = "subjectsInput")
+    WebElement inputSubjects;
+
+    @FindBy(xpath = "//label[contains(@for,'hobbies')]")
+    List<WebElement> allHobbies;
+
+    @FindBy(xpath = "//input[@id='uploadPicture']")
+    WebElement btnUploadFile;
+
+    @FindBy(xpath = "//input[@id='react-select-3-input']")
+    WebElement inputState;
+
+    @FindBy(xpath = "//input[@id='react-select-4-input']")
+    WebElement inputCity;
+
+    @FindBy(id = "submit")
+    WebElement btnSubmit;
+
+    @FindBy(xpath = "//div[contains(@class,'modal-title')]")
+    WebElement successTitleModal;
+
+    @FindBy(css = "[for='gender-radio-1']")
+    WebElement male;
+    @FindBy(css = "[for='gender-radio-2']")
+    WebElement female;
+    @FindBy(css = "[for='gender-radio-3']")
+    WebElement other;
 
     public PracticeFormPage enterPersomalData(String name, String lastName,
                                               String email, String phone) {
@@ -38,11 +65,12 @@ public class PracticeFormPage extends BasePage{
     }
 
     public PracticeFormPage selectGender(String gender) {
-        for(WebElement el:allGendersRadio) {
-            if (getTextBase(el).equals(gender)) {
-                clickBase(el);
-                break;
-            }
+        if (gender.equals("Male")) {
+            clickBase(male);
+        } else if (gender.equals("Female")) {
+            clickBase(female);
+        } else {
+            clickBase(other);
         }
         return this;
     }
@@ -54,5 +82,54 @@ public class PracticeFormPage extends BasePage{
         inputDateOfBirth.sendKeys(dateBirth);
         inputDateOfBirth.sendKeys(Keys.ENTER);
         return this;
+    }
+
+    public PracticeFormPage enterSubjects(String[] strings) {
+        for(String str: strings) {
+            typeText(inputSubjects, str);
+            inputSubjects.sendKeys(Keys.ENTER);
+        }
+        return this;
+    }
+
+    public PracticeFormPage selectHobby(String[] strings) {
+        for(String str: strings) {
+            for(WebElement element: allHobbies) {
+                if(getTextBase(element).equals(str)){
+                    clickBase(element);
+                    break;
+                }
+            }
+        }
+        return this;
+    }
+
+    public PracticeFormPage uploadFile(String path) {
+        btnUploadFile.sendKeys(path);
+        return this;
+    }
+
+    public PracticeFormPage selectState(String state) {
+       // clickBase(inputState);
+        inputState.sendKeys(state);
+        inputState.sendKeys(Keys.ENTER);
+        return this;
+    }
+
+    public PracticeFormPage selectCity(String city) {
+        //clickBase(inputCity);
+        inputCity.sendKeys(city);
+        inputCity.sendKeys(Keys.ENTER);
+        return this;
+    }
+
+    public PracticeFormPage clickOnSubmit() {
+        clickBase(btnSubmit);
+        return this;
+    }
+
+    public boolean verifySuccessTitle(String str) {
+        String actualRes = getTextBase(successTitleModal);
+        return isStringsEqual(actualRes, str);
     }
 }
