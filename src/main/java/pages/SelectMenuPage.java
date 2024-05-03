@@ -46,7 +46,7 @@ public class SelectMenuPage extends BasePage{
     }
 
     public SelectMenuPage fillSelectOne(String str) {
-        jsScroll(inputSelectOne,0,400);
+        jsScroll(0,400);
         clickBase(inputSelectOne);
         for(WebElement el : allDataInSelectOne) {
             if(getTextBase(el).equals(str)) {

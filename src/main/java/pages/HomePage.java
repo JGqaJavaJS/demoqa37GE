@@ -18,6 +18,9 @@ public class HomePage extends BasePage{
     @FindBy(xpath="//div[@class='card-body']//h5[contains(text(),'Widgets')]")
     WebElement btnWidgets;
 
+    @FindBy(xpath="//div[@class='card-body']//h5[contains(text(),'Forms')]")
+    WebElement btnForms;
+
     public AlertsWindowsPage clickOnAlertsFrames() {
         clickWithJSScroll(btnAlertsFrames, 0, 300);
         return new AlertsWindowsPage(driver);
@@ -36,5 +39,10 @@ public class HomePage extends BasePage{
     public InteractionPage clickOnInteractions() {
         clickWithJSScroll(btnInteractions, 0, 300);
         return new InteractionPage(driver);
+    }
+
+    public FormsPage clickForms() {
+        clickWithJSScroll(btnForms, 0, 300);
+        return new FormsPage(driver);
     }
 }

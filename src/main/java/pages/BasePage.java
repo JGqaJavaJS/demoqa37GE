@@ -26,11 +26,11 @@ public abstract class BasePage {
     }
 
     public void clickWithJSScroll(WebElement element, int x, int y) {
-        jsScroll(element, x, y);
+        jsScroll(x, y);
         clickBase(element);
     }
 
-    protected void jsScroll(WebElement element, int x, int y) {
+    protected void jsScroll(int x, int y) {
         js.executeScript("window.scrollBy(" + x + "," + y + ")");
     }
 
@@ -73,4 +73,16 @@ public abstract class BasePage {
         return Keys.CONTROL;
     }
 
+    public void hideIFrames() {
+        hideFooter();
+        hideBanner();
+    }
+
+    private void hideBanner() {
+        js.executeScript("document.getElementById('fixedban').style.display='none';");
+    }
+
+    private void hideFooter() {
+        js.executeScript("document.querySelector('footer').style.display='none';");
+    }
 }
